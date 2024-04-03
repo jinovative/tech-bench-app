@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import Navigation from "./App/Navigation";
+// import "./App/index.css"; // Assuming you have global styles you want to apply
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <div className="d-flex">
+        <Navigation />
+        <div style={{ flexGrow: 1 }}>
+          <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
+            {/* Define your main routes here */}
+            {/* For example */}
+            {/* <Route path="/login" element={<LoginComponent />} /> */}
+            {/* Add other routes as needed */}
+          </Routes>
+        </div>
+      </div>
+    </HashRouter>
   );
 }
 
