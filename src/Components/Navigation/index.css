@@ -1,0 +1,73 @@
+/* index.css */
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  background-color: #111; /* dark background */
+  color: white;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: block;
+}
+
+nav li a,
+nav li button {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  .sidebar-navigation {
+    padding-top: 60px; /* Adjust this value as needed to create space */
+  }
+  display: block;
+  border-left: 3px solid transparent;
+  transition: border-left 0.3s ease-in-out;
+}
+
+nav li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* Change the color of the border-left for the active link */
+nav li.active a,
+nav li.active button {
+  border-left: 3px solid #ff00ff; /* Pink color for the active link */
+}
+
+nav li ul {
+  display: none; /* Hide sublinks */
+  background-color: #222; /* Slightly lighter than main background */
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block; /* Show sublinks on hover or focus within */
+}
+
+nav li ul li {
+  padding-left: 30px; /* Indent sublinks */
+}
+
+/* Optional: Add a hover effect for links */
+nav li a:hover,
+nav li button:hover {
+  background-color: #333; /* Darker background for hover state */
+}
+
+/* You might need additional media queries to handle responsiveness */
+/* Add this to your index.css */
+.sidebar-navigation {
+  padding-top: 60px; /* Adjust this value as needed to create space */
+}

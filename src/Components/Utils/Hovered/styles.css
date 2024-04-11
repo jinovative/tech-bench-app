@@ -1,0 +1,39 @@
+.detail-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  z-index: 1;
+}
+
+.detail-box p {
+  margin: 0;
+}
+
+.detail-box button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.detail-box button a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+}
+
+.detail-box button a:hover {
+  background-color: #0069d9;
+}
